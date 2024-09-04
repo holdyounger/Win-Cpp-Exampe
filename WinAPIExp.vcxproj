@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <ProjectGuid>{ABF93E51-563C-45C9-BFA3-BAD9953B3F06}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectName>Builder_WinAPIExp</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="alllogocache\AllLogoCache.cpp" />
+    <ClCompile Include="api_expandenvironmentstrings\ExpandEnvironmentStrings.cpp" />
+    <ClCompile Include="cmdlinedesensization\CmdLineDesensization.cpp" />
+    <ClCompile Include="createservice\CreateService.cpp" />
+    <ClCompile Include="deviceiotest\DeviceIOTest.cpp" />
+    <ClCompile Include="dictest\DICTest.cpp" />
+    <ClCompile Include="enterineachsys\EnterInEachSys.cpp" />
+    <ClCompile Include="expandenvironmentstrings\ExpandEnvironmentStrings.cpp" />
+    <ClCompile Include="getchdfilebypath\GetChdFileByPath.cpp" />
+    <ClCompile Include="getcurloginuser\GetCurLoginUser.cpp" />
+    <ClCompile Include="getcurrenttime\GetCurrentTime.cpp" />
+    <ClCompile Include="getdominname\GetDominName.cpp" />
+    <ClCompile Include="getdrivetype\GetDriveType.cpp" />
+    <ClCompile Include="getenvironmentstringsw\GetEnvirmentStrings.cpp" />
+    <ClCompile Include="getprocaddress\GetProcaddress.cpp" />
+    <ClCompile Include="getprocesspath\GetProcessPath.cpp" />
+    <ClCompile Include="getsysinfo\GetCPUNumber.cpp" />
+    <ClCompile Include="getsysinfo\getwindowsstatus\GetWindowsStatus.cpp" />
+    <ClCompile Include="getsysinfo\main.cpp" />
+    <ClCompile Include="gettempdir\GetTempDir.cpp" />
+    <ClCompile Include="getusn\GetUSN.cpp" />
+    <ClCompile Include="getwindowsstatus\gitWindowsStatus.cpp" />
+    <ClCompile Include="hidevolume\HideVolume.cpp" />
+    <ClCompile Include="ipoption\GetAbailablePort.cpp" />
+    <ClCompile Include="ipoption\GetIpForwardTable.cpp" />
+    <ClCompile Include="ipoption\GetIsDeleteDefaultRot.cpp" />
+    <ClCompile Include="ipoption\GetNetInfo.cpp" />
+    <ClCompile Include="ipoption\GetPort.cpp" />
+    <ClCompile Include="ipoption\GetTcpStatistics.cpp" />
+    <ClCompile Include="ipoption\ipConvert.cpp" />
+    <ClCompile Include="ipoption\main.cpp" />
+    <ClCompile Include="movelogs\moveLogs.cpp" />
+    <ClCompile Include="multithread\MultiThread.cpp" />
+    <ClCompile Include="ncdetection\NcQuery.cpp" />
+    <ClCompile Include="netusermodalsget\NetUserModalsGet.cpp" />
+    <ClCompile Include="netuser\netuserenum\NetUserEnum.cpp" />
+    <ClCompile Include="netuser\netusergetinfo\NetUserGetInfo.cpp" />
+    <ClCompile Include="pathfindonpath\PathFindOnPath.cpp" />
+    <ClCompile Include="pipeclass\PipeClass.cpp" />
+    <ClCompile Include="pipeclass\PipeIPC.cpp" />
+    <ClCompile Include="pipeipc\pipeipc.cpp" />
+    <ClCompile Include="pipeipc\TAPipeIPC.cpp" />
+    <ClCompile Include="pipetest\ClientTest.cpp" />
+    <ClCompile Include="queryperformancecounter\QueryPerformanceCounter.cpp" />
+    <ClCompile Include="readfile\ReadFile.cpp" />
+    <ClCompile Include="reggetvalue\RegGetValue.cpp" />
+    <ClCompile Include="regnotifychangekeyvalue\CRegMonitorClass.cpp" />
+    <ClCompile Include="regnotifychangekeyvalue\RegNotifyChangeKeyValue .cpp" />
+    <ClCompile Include="regopenkey\RegOpenKey.cpp" />
+    <ClCompile Include="regtype\RegType.cpp" />
+    <ClCompile Include="removeandrestoremountpoint\RemoveAndRestoreMountPoint.cpp" />
+    <ClCompile Include="renamelnk\RenameLnk.cpp" />
+    <ClCompile Include="routechange\main.cpp" />
+    <ClCompile Include="servicecalldll\createservice\createservice.cpp" />
+    <ClCompile Include="servicecalldll\InjectDll.cpp" />
+    <ClCompile Include="servicecalldll\LoadMySqlFun.cpp" />
+    <ClCompile Include="servicecalldll\ProcessHelper.cpp" />
+    <ClCompile Include="servicecalldll\simpledll\dllmain.cpp" />
+    <ClCompile Include="servicecalldll\simpledll\pch.cpp" />
+    <ClCompile Include="servicecalldll\SimpleService.cpp" />
+    <ClCompile Include="shchangenotifyregister\SHChangeNotifyRegistr.cpp" />
+    <ClCompile Include="shellexecute\ShellExecute.cpp" />
+    <ClCompile Include="simpleapicollect\simpleapicollect\API.cpp" />
+    <ClCompile Include="simpleapicollect\simpleapicollect\main.cpp" />
+    <ClCompile Include="simpleservice\SimpleService.cpp" />
+    <ClCompile Include="sspilogin\CPJNNTLMConnetion.cpp" />
+    <ClCompile Include="sspilogin\PJNNTLMAuth.cpp" />
+    <ClCompile Include="sspilogin\SspiLogin.cpp" />
+    <ClCompile Include="sspilogin\SspiNTLMAuth.cpp" />
+    <ClCompile Include="test_semaphore_c\threadCtrl.cpp" />
+    <ClCompile Include="test_semaphore_d\Test_Semaphore_D.cpp" />
+    <ClCompile Include="threadpool_1\apr_md5.cpp" />
+    <ClCompile Include="threadpool_1\crypt_blowfish.cpp" />
+    <ClCompile Include="threadpool_1\ThreadPools.cpp" />
+    <ClCompile Include="threadpool_1\ThreadPool_1.cpp" />
+    <ClCompile Include="vldforptr\vldforptr.cpp" />
+    <ClCompile Include="waitforsingleobject\WaitForSingleObject.cpp" />
+    <ClCompile Include="wmicgetprocess\WmicGetProcess.cpp" />
+    <ClCompile Include="wnetcancelconnetion2\WNetCancelConnetion2.cpp" />
+    <ClCompile Include="wnetenumresource\WNetEnumResource.cpp" />
+    <ClCompile Include="wnetgetconnection\WNetGetConnection.cpp" />
+    <ClCompile Include="wnetgetresourceinformation\WNetGetResourceInformation.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="createservice\targetver.h" />
+    <ClInclude Include="getdrivetype\targetver.h" />
+    <ClInclude Include="getsysinfo\define.h" />
+    <ClInclude Include="getsysinfo\GetCPUNumber.h" />
+    <ClInclude Include="getsysinfo\getwindowsstatus\GetWindowsStatus.h" />
+    <ClInclude Include="ipoption\define.h" />
+    <ClInclude Include="movelogs\resource.h" />
+    <ClInclude Include="ncdetection\NcQuery.h" />
+    <ClInclude Include="pipeclass\PipeIPC.h" />
+    <ClInclude Include="pipeipc\TAPipeIPC.h" />
+    <ClInclude Include="regnotifychangekeyvalue\CRegMonitorClass.h" />
+    <ClInclude Include="servicecalldll\define.h" />
+    <ClInclude Include="servicecalldll\InjectDll.h" />
+    <ClInclude Include="servicecalldll\LoadMySqlFun.h" />
+    <ClInclude Include="servicecalldll\ProcessHelper.h" />
+    <ClInclude Include="servicecalldll\simpledll\framework.h" />
+    <ClInclude Include="servicecalldll\simpledll\pch.h" />
+    <ClInclude Include="simpleapicollect\simpleapicollect\API.h" />
+    <ClInclude Include="sspilogin\CPJNNTLMConnetion.h" />
+    <ClInclude Include="sspilogin\PJNNTLMAuth.h" />
+    <ClInclude Include="sspilogin\SspiNTLMAuth.h" />
+    <ClInclude Include="threadpool_1\apr_md5.h" />
+    <ClInclude Include="threadpool_1\crypt_blowfish.h" />
+    <ClInclude Include="threadpool_1\ThreadPools.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

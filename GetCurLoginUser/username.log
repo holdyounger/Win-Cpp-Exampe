@@ -1,0 +1,6 @@
+GetUserName: Administrator
+ENV_VAR USERNAME: Administrator
+session username: username
+session username: 
+GetUserName: Administrator
+ENV_VAR USERNAME: Administrator
