@@ -1,0 +1,2 @@
+ServiceCallDll/SimpleDll/mysqlcppconn8-static-debug-openssl3-mtd.lib filter=lfs diff=lfs merge=lfs -text
+ServiceCallDll/SimpleDll/mysqlcppconn8-static-Release-openssl3-mt.lib filter=lfs diff=lfs merge=lfs -text
