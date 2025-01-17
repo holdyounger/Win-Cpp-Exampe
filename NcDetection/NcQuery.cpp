@@ -3,7 +3,6 @@
 #define _WINSOCK_DEPRECATED_NO_WARNINGS
 
 #include <time.h>
-#include "inc/winlog.h"
 #include "NcQuery.h"
 #include <ws2tcpip.h>
 #include <iphlpapi.h>

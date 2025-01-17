@@ -18,12 +18,12 @@
 #define _WINSOCK_DEPRECATED_NO_WARNINGS
 #include <string>
 #include <vector>
+#include <map>
 #include <functional>
 #include <unordered_set>
 
 #include "json11\json11.hpp"
 #include "ModuleStatus.h"
-
 
 
 using namespace json11;
