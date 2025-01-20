@@ -15,7 +15,9 @@ long long num = 0;
 
 int main(void) {
 	// 创建n个线程句柄
-	HANDLE *tHandles = new HANDLE[NUM_THREAD];
+	HANDLE* tHandles = new HANDLE[NUM_THREAD]{0};
+
+	CloseHandle(tHandles[0]);
 
 	printf("sizeof long long :%d\n", sizeof(long long));
 

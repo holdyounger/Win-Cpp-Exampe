@@ -1,17 +1,86 @@
 #ifndef UNICODE
 #define UNICODE
 #endif
+
+
 #pragma comment(lib, "advapi32.lib")
 #pragma comment(lib, "netapi32.lib")
-
 #include <windows.h>
 #include <stdio.h>
 #include <assert.h>
+#include <wtsapi32.h>
 #include <lm.h>
+// #include <vld.h>
 #include <sddl.h>               /* for ConvertSidToStringSid function */
 
-int main(int argc, wchar_t * argv[])
+
+#define SECURITY_WIN32
+#include <Security.h>
+
+#pragma comment(lib, "Secur32.lib")
+#pragma comment(lib, "Wtsapi32.lib")
+
+BOOL GetCurUserName()
 {
+	BOOL bRet = FALSE;
+	WCHAR username[512];
+	DWORD usernameSize = sizeof(username);
+	if (FALSE == GetUserNameExW(NameSamCompatible, username, &usernameSize))
+	{
+		goto End;
+	};
+
+	wprintf(L"usernmaer: %s\n", username);
+	bRet = TRUE;
+End:
+	return bRet;
+}
+
+BOOL GetLocalCurUserName(WTS_INFO_CLASS wtsCls)
+{
+	BOOL bRet = FALSE;
+	DWORD sessionId;
+	LPWSTR ppBuffer[100];
+	DWORD bufferSize;
+
+	do
+	{
+		sessionId = WTSGetActiveConsoleSessionId();
+
+		bRet = WTSQuerySessionInformationW(WTS_CURRENT_SERVER_HANDLE, sessionId, wtsCls, ppBuffer, &bufferSize);
+
+		printf(" GetLocal1CurUserName --> %S\n", *ppBuffer);
+
+		if (bRet == TRUE)
+		{
+			// WTSFreeMemory(ppBuffer);
+		}
+
+	} while (FALSE);
+
+	return bRet;
+}
+
+BOOL GetLolComputerName()
+{
+	BOOL bRet = FALSE;
+	WCHAR  sComputer[MAX_COMPUTERNAME_LENGTH + 2] = { 0 };
+	DWORD  bufCharCount = MAX_COMPUTERNAME_LENGTH + 2;
+	if (FALSE == GetComputerNameW(sComputer, &bufCharCount))
+	{
+		goto End;
+	};
+
+	wprintf(L"sComputer: %s\n", sComputer);
+	bRet = TRUE;
+End:
+	return bRet;
+}
+
+#if 0
+void GetDomainUser(int argc, wchar_t* argv[])
+{
+
 	DWORD dwLevel = 0;
 
 	LPUSER_INFO_0 pBuf = NULL;
@@ -292,5 +361,18 @@ int main(int argc, wchar_t * argv[])
 			break;
 		}
 	}
+}
+
+#endif
+
+int main(int argc, wchar_t * argv[])
+{
+	GetLocalCurUserName(WTSUserName);
+	GetLocalCurUserName(WTSDomainName);
+	GetCurUserName();
+	GetLolComputerName();
+
+	return 0;
+
 	return 0;
 }

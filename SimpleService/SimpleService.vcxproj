@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{e50bb767-4257-424a-8e45-35de7cff702a}</ProjectGuid>
+    <ProjectGuid>{CFB98806-3A53-43F4-B8B2-69FFFC123F42}</ProjectGuid>
     <RootNamespace>CreateServiceRegisterServiceCtrlHandler</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <ProjectName>SimpleService</ProjectName>

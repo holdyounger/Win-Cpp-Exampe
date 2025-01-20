@@ -237,6 +237,7 @@ void disableUser(int argc, wchar_t *argv[])
 	//
 	fprintf(stderr, "\nTotal of %d entries enumerated\n", dwTotalCount);
 }
+
 int main1(int argc, wchar_t *argv[])
 {
 	DWORD dw;
