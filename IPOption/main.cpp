@@ -13,8 +13,10 @@ extern int IpConvert();
 
 int main(_In_ int argc, _In_reads_(argc) _Pre_z_ char** argv, _In_z_ char** envp)
 {
+	IpConvert();
 
-	// IpConvert();
+	Ipv6Convert();
+
 
 	GetNetInfo();
 

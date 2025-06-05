@@ -18,3 +18,4 @@ int GetPort();
 int GetTcpStatisticsTest();
 
 int IpConvert();
+int Ipv6Convert();

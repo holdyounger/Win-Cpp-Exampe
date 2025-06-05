@@ -51,6 +51,9 @@ static inline void GetNewFileName(const CString& path, __out CString& name) {
 int main() 
 {
     CString name = "future.exe";
+
+    CString ext = name.Right(name.GetLength() - 1);
+
     GetNewFileName("C:\\rdbg\\123.exe", name);
 
     GetTempDir();
