@@ -1,0 +1,3 @@
+LIBRARY GoodDll
+EXPORTS
+    Uninstall

@@ -1,0 +1,3 @@
+LIBRARY BadDll
+EXPORTS
+    Uninstall
