@@ -42,11 +42,11 @@ public:
     }
 
 private:
-    CString m_strInstalledDB;
-    CString m_strInstalledDB64;
-    CString m_strNewDB;
-    CString m_strNewDB64;
-    CString m_strInsExePath;
+    CStringW m_strInstalledDB;
+    CStringW m_strInstalledDB64;
+    CStringW m_strNewDB;
+    CStringW m_strNewDB64;
+    CStringW m_strInsExePath;
     HMODULE m_hAppHelp;
 };
 
